@@ -5,8 +5,10 @@ services:
     # build from Dockerfile
         context: .
         dockerfile: Dockerfile
+    environment:
+     - JUPYTER_TOKEN=datacamp
     ports:
-     - "8888:8888"
+     - "5000:5000"
     volumes:
      - ./:/home/jovyan/work
     container_name: docker-notebook

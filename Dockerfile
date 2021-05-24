@@ -13,6 +13,6 @@ RUN pip3 install -U jupyter jupyterlab
 RUN jupyter serverextension enable --py jupyterlab --sys-prefix
 RUN python3 -m pip install -r requirements.txt
 
-EXPOSE 8888
+EXPOSE 5000
 
-CMD ["jupyter", "lab", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+CMD ["jupyter", "lab", "--port=5000", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
