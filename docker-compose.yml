@@ -1,0 +1,12 @@
+version: "3"
+services:
+  docker-notebook:
+    build: 
+    # build from Dockerfile
+        context: .
+        dockerfile: Dockerfile
+    ports:
+     - "8888:8888"
+    volumes:
+     - ./:/home/jovyan/work
+    container_name: docker-notebook
